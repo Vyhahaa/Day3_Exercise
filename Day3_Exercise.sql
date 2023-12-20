@@ -48,4 +48,15 @@ where author_id = viewer_id
 order by author_id;
 
 --Ex13
+SELECT * FROM parts_assembly
+where finish_date is null;
+
+--Ex14
+select * from lyft_drivers
+where yearly_salary <= 30000
+or yearly_salary > 70000;
+
+--Ex15
+select * from uber_advertising
+where money_spent > 100000;
 
