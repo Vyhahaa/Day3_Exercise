@@ -23,3 +23,14 @@ where date(payment_date) in ('2020-04-28','2020-04-29','2020-04-30')
 group by customer_id, date(payment_date)
 having count(payment_id) > 1
 order by avg_amount desc
+
+
+-- THỨ TỰ THỰC HIỆN CÂU LỆNH: SELECT - AGGEGRATION SYNTAX - FROM - WHERE - GROUP BY - HAVING - ORDER BY - LIMIT
+select customer_id, 
+count(*) as total_record
+from payment
+where payment_date >= '2020-01-30'
+group by customer_id
+having count (*) <= 15
+order by total_record desc
+limit (5)
