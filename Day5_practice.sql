@@ -9,3 +9,5 @@ select (count (city) - count (distinct city)) from station;
 SELECT ROUND(AVG(salary)-AVG(REPLACE(salary,'0','')),0) FROM EMPLOYEES;
 
 --Ex4
+SELECT sum(item_count*order_occurrences) / sum(item_count)
+FROM items_per_order;
